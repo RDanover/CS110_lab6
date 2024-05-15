@@ -21,7 +21,7 @@ app.post ('/book', (req, res) => {
 
     res.send('Book is added to the database');
 });
-
+//colon is the parameter 
 app.post ('/book/:isbn', (req, res) => {
     const isbn = req.params.isbn; 
     const newBook = req.body;

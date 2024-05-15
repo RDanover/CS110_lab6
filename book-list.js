@@ -1,6 +1,6 @@
 async function loadBooks() {
 
-    let response = await fetch("https://localhost:3000/books");
+    let response = await fetch("http://localhost:3000/books");
 
     console.log(response.status);//200
     console.log(response.statusText);//OK
@@ -34,7 +34,7 @@ async function loadBooks() {
                 </div>
             `;
 
-            document.getElementById('books').innerHTML = document.getElementById('books').innerHTML + x;
+            document.getElementById("books").innerHTML = document.getElementById("books").innerHTML + x;
 
         }
     }
