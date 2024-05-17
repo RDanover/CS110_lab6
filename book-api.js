@@ -43,15 +43,15 @@ app.get('/books', (req,res) =>{
     res.json(books);
 });
 
-app.get('/book/:isbn', (req, res) => {
+app.get('/book/:isbn', (req, res) => {//get book by isbn used for edit form
     const isbn = req.params.isbn;
-    const book = books.find(b => b.isbn === isbn);
-
-    if (book) {
-        res.json(book);
-    } else {
-        res.status(404).send('Book not found');
+    for(let i = 0; i<books.length;i++){
+        let book = books[i];
+        if(book.isbn === isbn){
+            var book_to_send = books[i];
+        }
     }
+    res.json(book_to_send);
 });
 
 app.delete ('/book/:isbn', (req, res) => {
