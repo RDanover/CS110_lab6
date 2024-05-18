@@ -111,6 +111,4 @@ async function submitEditForm(isbn) {
     }
 }
 
-document.getElementById('newBookForm').onsubmit = submitNewBookForm;
-
 loadBooks();
